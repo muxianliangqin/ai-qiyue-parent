@@ -22,7 +22,15 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.4</spring-cloud.version>
         <spring-boot-maven-plugin.version>2.5.0</spring-boot-maven-plugin.version>
+        <xxljob-version>2.2.0</xxljob-version>
+        <lombok-version>1.18.20</lombok-version>
+        <fastjson-version>1.1.24</fastjson-version>
     </properties>
+
+    <modules>
+        <module>web</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -33,35 +41,24 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-                <version>3.0.4</version>
-            </dependency>
-            <dependency>
                 <groupId>com.xuxueli</groupId>
                 <artifactId>xxl-job-core</artifactId>
-                <version>2.2.0</version>
+                <version>${xxljob-version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.20</version>
+                <version>${lombok-version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot-maven-plugin.version}</version>
-            </plugin>
-        </plugins>
-    </build>
-
     <distributionManagement>
         <snapshotRepository>
             <id>ai-qiyue-snapshots</id>
