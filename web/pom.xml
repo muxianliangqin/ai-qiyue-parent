@@ -6,7 +6,6 @@
         <groupId>com.qiyue</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <artifactId>web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
